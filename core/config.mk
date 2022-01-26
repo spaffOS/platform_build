@@ -316,7 +316,7 @@ include $(BUILD_SYSTEM)/envsetup.mk
 # See envsetup.mk for a description of SCAN_EXCLUDE_DIRS
 FIND_LEAVES_EXCLUDES := $(addprefix --prune=, $(SCAN_EXCLUDE_DIRS) .repo .git)
 
-include vendor/hentai/config/BoardConfigHentai.mk
+include vendor/spaff/config/BoardConfigSpaff.mk
 
 # The build system exposes several variables for where to find the kernel
 # headers:
@@ -1173,6 +1173,6 @@ DEFAULT_DATA_OUT_MODULES := ltp $(ltp_packages) $(kselftest_modules)
 # Make RECORD_ALL_DEPS readonly.
 RECORD_ALL_DEPS :=$= $(filter true,$(RECORD_ALL_DEPS))
 
-include vendor/hentai/build/core/config.mk
+include vendor/spaff/build/core/config.mk
 
 include $(BUILD_SYSTEM)/dumpvar.mk
